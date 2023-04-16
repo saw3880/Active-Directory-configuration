@@ -58,6 +58,47 @@ to see that its getting traffic from dc-1.
 <p>
 Now we will be installing A.D domain services on dc-1 and make it a domain controller.In the start menu click on service manager, add roles
 and features.
+</p>
+</p>
+
+
+
+<img src="https://i.imgur.com/ToZZRxc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+Once it as downloaded we wil then make dc-1 as the domain controller in the service manager hub where it says Promote the server as a DC
+once finish i must name it as a root domain name called  mydomain.com / or anything you want with a password.Then it will automatically restart.
+</p>
+</p>
+
+
+
+
+
+<img src="https://i.imgur.com/Lnq6qbD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+After logging back in to dc-1 as mydomain.com/ ur name which was made to make when creating your dc-1 vm and password.In the service manager hub
+go to tools then Active Directory Users and Computers then create an Organizational Unit which is  a folder we will then name 
+_EMPLOYEES and another OU called _ADMINS we will add jane doe as a user in the _ADMINS folder so when logging it will be mydomain/jane.doe.finally
+we must make jane a domain admin after resatart and log in as mydomain.com/jane.doe.
+</p>
+</p>
+
+
+<img src="https://i.imgur.com/I6ZPrfj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+</p>
+
+<img src="https://i.imgur.com/2dOT846.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+
+Once logged back in as jane.doe we must now Join Client-1 to your domain (mydomain.com/jane.doe by changing its dns to dc-1 Private IP address.In client-1
+vm go to system then rename this pc to mydomain.once i do that from the azure portal i will need dc-1 private ip. copy it then paste its private ip address
+to client-1. 
+</p>
+</p>
 
 
 
@@ -65,7 +106,5 @@ and features.
 <img src=" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
-
-
 
 
