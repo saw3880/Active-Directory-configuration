@@ -6,10 +6,6 @@
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -95,7 +91,7 @@ we must make jane a domain admin after resatart and log in as mydomain.com/jane.
 <br />
 
 Once logged back in as jane.doe we must now Join Client-1 to your domain (mydomain.com/jane.doe by changing its dns to dc-1 Private IP address.In client-1
-vm go to system then rename this pc to mydomain.once i do that from the azure portal i will need dc-1 private ip. copy it then paste its private ip address
+vm go to system then rename this pc to mydomain.once you will get a error so  from the azure portal i will need dc-1 private ip. copy it then paste its private ip address
 to client-1. 
 </p>
 </p>
@@ -103,8 +99,21 @@ to client-1.
 
 
 
-<img src=" " height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/HMNQZCl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br />
+After  restarting client-1 log back in and go to system and rename this pc again, this time it will work now its conneced to domain controller.
+Jane.doe can log in to any pcs under the same domain.Now logging in client-1 as jane.doe we will create users so they all can log into client-1 vm.
+so from system then remote desktop then ad users and add “domain users” check names.
+</p>
+</p>
 
+
+<img src="https://i.imgur.com/LmRPtcC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<br />
+Now we will create the users that will be able to log in to dc-1 and open powershell ise run as an administrator.
+Create a new File and paste the contents of the script into it Run the script and instead of making 10000 i will make 1000. what this will do its 
+going to make a bunch of random user acoounts.once done going back to the employess folder u will find all the made up user accounts
+they all wil use the same password1 made earlier so mydomain.com/bud.rai password1. :)
 
